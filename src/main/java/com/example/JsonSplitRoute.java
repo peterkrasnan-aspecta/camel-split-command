@@ -35,6 +35,7 @@ public class JsonSplitRoute extends RouteBuilder {
             
             // Split the array into individual objects
             .split(body())
+                .delay(5000)
                 .log("Processing item: ${body}")
                 .log("Item details - Name: ${body.name}, Age: ${body.age}, City: ${body.city}")
                 
